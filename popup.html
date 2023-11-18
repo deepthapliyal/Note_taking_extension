@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteSwift</title>
+  <style>
+    body {
+      font-size: medium;
+      background-color: darkslategrey;
+
+      width: 95vw;
+      font-family: 'Arial', sans-serif;
+      padding: 10px;
+    }
+
+    textarea {
+      width: 50vw;
+      height: 150px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 8px 12px; /* Adjusted padding for better button appearance */
+      cursor: pointer;
+    }
+
+    .container {
+      width: 95vw;
+      display: flex;
+    }
+    .InputContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .notesList{
+        height: 80vh;
+        padding: 4px;
+        width: 60%;
+        overflow-y: auto;
+     
+    }
+    .notesList div {
+      background-color: cadetblue;
+      margin-bottom: 8px; /* Adjusted margin for better spacing */
+      padding: 15px; /* Adjusted padding for better list item appearance */
+      border-radius: 50px;
+      
+    }
+    .button{
+        background-color: mintcream;
+        border-radius: 50px;
+        
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="InputContainer">
+      <textarea id="noteInput" placeholder="Enter your note"></textarea>
+      <div>
+
+          <button class="button" id="saveButton">Save Note</button>
+          <button class="button"  id="clearButton">Delete all Notes</button>
+
+        </div>
+    </div>
+    <div id="notesList" class="notesList"></div>
+  </div>
+
+  <!-- If you don't have popup.js, you can remove the following line -->
+  <script src="popup.js"></script>
+</body>
+</html>
